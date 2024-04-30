@@ -1,0 +1,8 @@
+[theme]
+base="light"
+primaryColor="#f63366"
+backgroundColor="#f0f0f0"
+
+[server]
+headless=true
+port=8501
