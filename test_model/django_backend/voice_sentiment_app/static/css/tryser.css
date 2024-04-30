@@ -1,0 +1,116 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 150px;
+}
+
+#lists li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#lists a {
+    text-decoration: none;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#lists a:hover {
+    color: #235991;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Subtract header and footer height */
+}
+
+.voice-container, .upload-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    width: 50%;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center; /* Ensures all content is centered */
+    display: flex; /* Use flexbox to align children centrally */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align children horizontally */
+    transition: transform 0.3s ease;
+}
+
+.voice-container:hover, .upload-container:hover {
+    transform: scale(1.05);  /* Slight scale on hover for interactive feel */
+}
+
+
+/* Button sizing for harmony */
+#recordButton, .upload-button, .custom-file-upload {
+    padding: 15px 30px;
+    background-color: #235991;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: block; /* Aligns content within the button */
+    width: auto; /* Adapts width to the content inside */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.custom-file-upload {
+    display: inline-block; /* Change display to inline-block for better control */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Hide the actual file input element visually */
+}
+#fileInput {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#recordButton:hover, .upload-button:hover, .custom-file-upload:hover {
+    background-color: #1e4d80;
+}
+
+#fileInput {
+    display: none;
+}
+
+footer {
+    background: linear-gradient(to right, #000000, #235991);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /* Use 'fixed' if you want the footer to always stay at the bottom */
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+}
+
+

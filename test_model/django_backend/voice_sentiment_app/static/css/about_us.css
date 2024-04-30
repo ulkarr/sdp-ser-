@@ -1,0 +1,152 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: #f0f0f0;
+    /* Adding a light background color */
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Adding a subtle shadow */
+}
+
+.logo {
+    width: 150px;
+}
+
+#lists li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#lists a {
+    text-decoration: none;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#lists a:hover {
+    color: #235991;
+}
+
+.wrapper h1 {
+    font-family: 'Verdana', cursive;
+    font-size: 52px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.team .team_member {
+    background: rgb(203, 206, 205);
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: #1f1f1f;
+    position: relative;
+    border-radius: 30px;
+}
+
+.team .team_member h4 {
+    color: #235991;
+    font-size: 26px;
+    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.team .team_member p.role {
+    color: #727070;
+    margin: 12px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.team .team_member .team_img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.team .team_member .team_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+.team .team_member .contact-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #235991;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.team .team_member .contact-button:hover {
+    background-color: #1f1f1f;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+footer {
+    background: linear-gradient(to right, #000000, #235991);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /* Use 'fixed' if you want the footer to always stay at the bottom */
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+}

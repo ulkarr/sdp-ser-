@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'media/logo.png' %}" class="logo">
+        </a>
+        <ul id="lists">
+            <li> <a href="{% url 'home' %}">Home</a></li>
+            <li> <a href="{% url 'about_us' %}">About Us</a></li>
+            <li> <a href="{% url 'tryser' %}">Try SER.</a></li>
+            <li> <a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Phone: xxx-xxx-xxxx</p>
+        <p>Email: theacerssdp@gmail.com</p>
+    </div>
+
+    <div class="comments-questions">
+        <h2>Comments and Questions</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="comment">Comment/Question:</label><br>
+            <textarea id="comment" name="comment"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    <footer>
+        <p> &copy; 2024. All rights reserved. </p>
+    </footer>
+    </div>
+</body>

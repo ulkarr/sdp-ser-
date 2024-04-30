@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About us</title>
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'media/logo.png' %}" class="logo">
+        </a>
+        <ul id="lists">
+            <li> <a href="{% url 'home' %}">Home</a></li>
+            <li> <a href="{% url 'about_us' %}">About Us</a></li>
+            <li> <a href="{% url 'tryser' %}">Try SER.</a></li>
+            <li> <a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <h1>Our Team</h1>
+        <div class="team">
+            <div class="team_member">
+                <div class="team_img">
+                    <img src="{% static 'media/aliya.jpg' %}"alt="Team_image">
+                </div>
+                <h4>Aliya Huseynova</h4>
+                <p class="role">IT</p>
+                <p>Hello! As an senior student of the Information Technology faculty at ADA University, I, Aliya Huseynova, is eager to bring my dedication to the field of artificial intelligence, coupled with a knowledge in machine learning algorithms.
+                    My passion for exploring the human-computer interactions has inspired me to contribute my skills to improving this Speech Emotion Recognition project.</p>
+
+                <a href="mailto:ahuseynova11989@ada.edu.az" class="contact-button">Contact Me</a>
+            </div>
+
+            <div class="team_member">
+                <div class="team_img">
+                    <img src="{% static 'media/Laman.jpeg' %}" alt="Team_image">
+                </div>
+                <h4>Laman Majid</h4>
+                <p class="role">CS</p>
+                <p>Hello! My name is Laman Majid, and I'm a senior year CS student at ADA University. I'm passionate about making contributions to the domains of artificial intelligence and machine learning. The field of Natural Language Processing, particularly,
+                    has captured my interest, motivating me to engage in this project focused on developing a speech emotion recognition model for the Azerbaijani language.</p>
+
+                <a href="mailto:lmajid11512@ada.edu.az" class="contact-button">Contact Me</a>
+            </div>
+
+            <div class="team_member">
+                <div class="team_img">
+                    <img src="{% static 'media/ulkar.jpg' %}" alt="Team_image">
+                </div>
+                <h4>Ulkar Mammadli</h4>
+                <p class="role">CS</p>
+                <p>Hello! I'm Ulkar Mammadli, a final year Computer Science student at ADA University. Currently, I'm delving into the realm of speech emotion recognition with a dedicated team. Our mission is to develop innovative solutions that decode the
+                    nuances of human emotions through speech. Join us as we explore the captivating intersection of technology and human emotion on our website for SER .</p>
+
+                <a href="mailto:umammadli12140@ada.edu.az" class="contact-button">Contact Me</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try SER.</title>
+    <link href="{% static 'css/tryser.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'media/logo.png' %}" class="logo">
+        </a>
+        <ul id="lists">
+            <li> <a href="{% url 'home' %}">Home</a></li>
+            <li> <a href="{% url 'about_us' %}">About Us</a></li>
+            <li> <a href="{% url 'tryser' %}">Try SER.</a></li>
+            <li> <a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+
+      <!--  <div class="voice-container">
+            <button id="recordButton">Record</button>
+            <p id="recordingStatus">Not Recording</p>
+            <audio id="audioPlayback" controls hidden></audio>
+            <a id="downloadLink" href="#" style="display: none;">Download Recording</a>
+        </div>
+        -->
+<div class="upload-container">
+    <label for="fileInput" class="custom-file-upload">Choose File</label>
+    <input type="file" id="fileInput" accept=".wav">
+    <button class="upload-button" onclick="uploadAndPredict()">Predict Emotion</button>
+    <audio id="audioPlayback" controls hidden></audio> <!-- Audio player added -->
+    <p id="predictionResult"></p>
+</div>
+
+
+
+    </div>
+
+
+
+
+    <footer>
+        <p> &copy; 2024. All rights reserved. </p>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const recordButton = document.getElementById('recordButton');
+    const recordingStatus = document.getElementById('recordingStatus');
+    let mediaRecorder;
+    let audioChunks = [];
+
+    recordButton.addEventListener('click', function() {
+        if (recordButton.innerText === 'Record') {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.start();
+                    recordButton.innerText = 'Stop Recording';
+                    recordingStatus.innerText = 'Recording...';
+                    audioChunks = [];
+
+                    mediaRecorder.ondataavailable = function(e) {
+                        audioChunks.push(e.data);
+                    };
+
+                    mediaRecorder.onstop = function() {
+                        const audioBlob = new Blob(audioChunks);
+                        sendAudioToServer(audioBlob);
+                        recordButton.innerText = 'Record';
+                        recordingStatus.innerText = 'Not Recording';
+                    };
+                });
+        } else {
+            mediaRecorder.stop();
+        }
+    });
+
+function sendAudioToServer(blob) {
+    const formData = new FormData();
+    formData.append('file', blob, 'recording.wav');
+
+    fetch('{% url "audio_upload" %}', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.json())
+      .then(data => {
+        console.log('Server response:', data.message); // Ensure this logs or updates the UI
+        recordingStatus.innerText = data.result; // Update the UI with the analysis result
+    }).catch(error => console.error('Error uploading audio:', error));
+}
+});
+
+
+function uploadAndPredict() {
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+    const formData = new FormData();
+    formData.append('file', file);
+
+    fetch('{% url "audio_upload" %}', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.json())
+      .then(data => {
+        document.getElementById('predictionResult').innerText = 'Emotion: ' + data.emotion;
+    }).catch(error => console.error('Error:', error));
+}
+
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    var predictionResult = document.getElementById('predictionResult');
+    var audioPlayer = document.getElementById('audioPlayback');
+
+    // Clear the prediction result each time a new file is chosen
+    predictionResult.innerText = '';
+
+    // Hide the audio player initially and remove previous source
+    audioPlayer.src = '';
+    audioPlayer.hidden = true;
+    audioPlayer.controls = false;
+
+    var file = event.target.files[0];
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            // Update the audio source and show controls
+            audioPlayer.src = e.target.result;
+            audioPlayer.hidden = false;
+            audioPlayer.controls = true;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SER.</title>
+    <!-- Update the CSS link -->
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <a href="{% url 'home' %}">
+            <!-- Update the image source -->
+            <img src="{% static 'media/logo.png' %}" class="logo">
+        </a>
+        <ul id="lists">
+            <!-- Update links to use the url template tag for Django path resolution -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about_us' %}">About Us</a></li>
+            <li><a href="{% url 'tryser' %}">Try SER.</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <video autoplay muted loop id="background-video">
+        <!-- Update video source -->
+        <source src="{% static 'media/video.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="home-content">
+        <h1>Welcome!</h1>
+        <p id="welcome">This Speech Emotion Recognition model in Azerbaijani language, created by Laman, Ulkar and Aliya for Senior Design Project.</p>
+    </div>
+
+    <div class="images-home">
+        <!-- Image content here -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

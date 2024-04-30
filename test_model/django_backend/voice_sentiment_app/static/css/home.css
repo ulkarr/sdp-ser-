@@ -1,0 +1,84 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: #f0f0f0;
+    /* Adding a light background color */
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 150px;
+}
+
+#lists li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#lists a {
+    text-decoration: none;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#lists a:hover {
+    color: #235991;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home-content {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: transparent;
+    max-width: 900px;
+    text-align: center;
+    margin: 60px auto;
+    padding: 30px;
+    overflow: hidden;
+}
+
+
+/* Add some padding and margin to the body to ensure content isn't hidden by the fixed footer */
+
+body {
+    background-color: #fafafa;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+footer {
+    background: linear-gradient(to right, #000000, #235991);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /* Use 'fixed' if you want the footer to always stay at the bottom */
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+}
