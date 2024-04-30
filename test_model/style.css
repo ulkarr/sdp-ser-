@@ -1,0 +1,81 @@
+
+  div.css-1wrcr25.egzxvld4 {
+    background-color: #6e6cdb;
+    /* background-color: white; */
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  }
+
+  div.css-1hynsf2.e1tzin5v3{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: blueviolet;
+    text-shadow: 2px 2px #d3d3d3;
+    letter-spacing: 2px;
+    margin-top: 50px;
+  }
+
+  
+  header.css-18ni7ap.e8zbici2 {
+    background-color: blueviolet;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header.css-18ni7ap.e8zbici2 a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  header.css-18ni7ap.e8zbici2 .about-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(234, 231, 237);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  header.css-18ni7ap.e8zbici2 .contact-btn {
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(234, 231, 237);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  header.css-18ni7ap.e8zbici2 .about-btn:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+  
+  header.css-18ni7ap.e8zbici2 .contact-btn:hover {
+    background-color: white;
+    color: blueviolet;
+  }
+
